@@ -1,0 +1,73 @@
+/* Стили для контейнера с кнопками */
+.buttons-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.buttons-container button {
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #ffff00;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttons-container button:hover {
+  background-color: #7851a9;
+}
+
+/* Стили для информации об изменениях */
+last-modified {
+  position: absolute;
+  top: 100px;
+  right: 1000px;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* Стили для контейнера с рисунками */
+.image-container {
+  position: relative;
+}
+
+/* Стили для рисунков */
+.image {
+  position: absolute;
+  width: 550px;
+  height: 300px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Задаем порядок отображения и имена рисунков */
+.image-container #image1 {
+  z-index: 1;
+  top: 0; /* Расположение первой картинки без сдвига */
+}
+
+.image-container #image2 {
+  z-index: 2;
+  top: 320px; /* Расположение второй картинки с небольшим сдвигом вниз */
+}
+
+.image-container #image3 {
+  z-index: 3;
+  top: 640px; /* Расположение третьей картинки с дополнительным сдвигом вниз */
+}
+
+/* Исходные и альтернативные стили для ячеек таблицы */
+.normal,
+.alternative {
+  background-color: #f0f0f0;
+  color: #000;
+  right: 500px;
+}
+
+.alternative {
+  background-color: #000000;
+  color: #ff0000;
+}

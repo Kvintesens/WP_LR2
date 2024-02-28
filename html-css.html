@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Videoprod</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>Videoprod</h1>
+        <p>Videoprod — Студия видеопродакшена полного цикла. Качественное видео – это не просто сценарий и съемка, а целый комплекс подготовительных работ.</p>
+        </details>&nbsp;<h2>Мы работали с ними:</h2>
+          <p class="news"><span class="date">Роснефть </span></p>
+          <p class="news"><span class="date">Gorilla </span></p>
+          <p class="news"><span class="date">Hyundai </span></p>
+          <p class="news"><span class="date">Metro </span></p>
+        
+	</main>
+  </div> 
+  <div class="buttons-container">
+<button id="windowButton">Window</button>
+<button id="navigatorButton">Navigator</button>
+<button id="locationButton">Location</button>
+<button id="screenButton">Screen</button>
+</div>
+</body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Таблица с альтернативными стилями</title>
+</head>
+<body>
+<script>
+
+</script>
+<table id="myTable">
+<tr>
+<td class="normal">Ячейка 1</td>
+<td class="normal">Ячейка 2</td>
+</tr>
+
+</tr>
+
+
+<tr>
+
+<tr>
+<td class="normal">Ячейка 3</td>
+<td class="normal">Ячейка 4</td>
+</tr>
+</table>
+
+<script>
+// Получаем все ячейки таблицы
+var cells = document.querySelectorAll("#myTable td");
+
+// Добавляем обработчики событий для наведения мыши и отодвигания мыши
+cells.forEach(function(cell) {
+cell.addEventListener("mouseover", function() {
+// Применяем альтернативные стили при наведении мыши
+cell.className = "alternative";
+});
+
+cell.addEventListener("mouseout", function() {
+// Восстанавливаем исходные стили при отодвигании мыши
+cell.className = "normal";
+});
+});
+</script>
+</body>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Рисунки с именами и слоями</title>
+</head>
+<body>
+
+<div class="button-container">
+<button id="hideImage">Скрыть средний слой</button>
+<button id="showImage">Показать средний слой</button>
+<button id="swapLayers">Поменять слои</button>
+</div>
+
+<div id="lastModifiedInfo" class="last-modified"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var lastModified = new Date(document.lastModified);
+  var infoElement = document.createElement("p");
+  infoElement.textContent = "Документ был изменен " + lastModified.toLocaleString();
+  
+  // Добавляем информацию в div с идентификатором "lastModifiedInfo"
+  var lastModifiedInfoDiv = document.getElementById("lastModifiedInfo");
+  lastModifiedInfoDiv.appendChild(infoElement);
+});
+</script>
+
+<div class="image-container">
+<img id="image1" class="image" src="image1.jpg" alt="Рисунок 1">
+<img id="image2" class="image" src="image2.jpg" alt="Рисунок 2">
+<img id="image3" class="image" src="image3.jpg" alt="Рисунок 3">
+</div>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Обработчик для кнопки "Window"
+var windowButton = document.getElementById("windowButton");
+windowButton.addEventListener("click", function() {
+// Получаем текущее содержимое строки состояния браузера
+var currentLocation = window.location.href;
+
+// Открываем окно сообщения с содержимым строки состояния
+var message = "Содержимое строки состояния браузера:\n" + currentLocation;
+var result = prompt(message, currentLocation);
+
+// Проверяем, был ли введен новый текст
+if (result !== null) {
+// Заменяем содержимое строки состояния новым текстом
+window.location.href = result;
+}
+});
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Обработчик для кнопки "Navigator"
+var navigatorButton = document.getElementById("navigatorButton");
+navigatorButton.addEventListener("click", function() {
+// Получаем информацию о браузере из объекта navigator
+var browserInfo = "Тип браузера: " + navigator.appName + "\n";
+browserInfo += "Название браузера: " + navigator.appVersion + "\n";
+browserInfo += "Платформа: " + navigator.platform + "\n";
+browserInfo += "User-Agent: " + navigator.userAgent;
+
+// Выводим информацию о браузере в окно сообщения
+alert(browserInfo);
+});
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Обработчик для кнопки "Location"
+var locationButton = document.getElementById("locationButton");
+locationButton.addEventListener("click", function() {
+// Получаем информацию о местоположении (location)
+var username = prompt("Введите ваше имя:");
+var locationInfo = "Имя пользователя: " + username + "\n";
+locationInfo += "Адрес загруженного документа: " + window.location.href;
+
+// Выводим информацию о местоположении в окно сообщения
+alert(locationInfo);
+});
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Обработчик для кнопки "Screen"
+var screenButton = document.getElementById("screenButton");
+screenButton.addEventListener("click", function() {
+// Получаем информацию о параметрах экрана (screen)
+var screenInfo = "Ширина экрана: " + window.screen.width + " пикселей\n";
+screenInfo += "Высота экрана: " + window.screen.height + " пикселей\n";
+screenInfo += "Глубина цвета: " + window.screen.colorDepth + " бит";
+
+// Выводим информацию о параметрах экрана в окно подтверждения
+var confirmation = confirm(screenInfo);
+
+// Если пользователь нажал "Ок", повторно выводим информацию в окне браузера
+if (confirmation) {
+alert(screenInfo);
+}
+});
+});
+</script>
+<script>
+// Найти заголовок и добавить обработчик события onMouseOver
+var header = document.querySelector("h1");
+header.onmouseover = function() {
+window.status = "Читай текст!";
+};
+
+// Добавить обработчик события onMouseOut для возвращения к предыдущему состоянию строки
+header.onmouseout = function() {
+window.status = "Продолжение работы";
+};
+</script>
+<script>
+// Найти первый абзац и добавить обработчик события onMouseOver
+var firstParagraph = document.querySelector("p");
+firstParagraph.onmouseover = function() {
+this.style.color = "red"; // Изменить цвет символов
+this.style.fontFamily = "Arial, sans-serif"; // Изменить шрифт
+};
+
+// Добавить обработчик события onMouseOut для возвращения к первоначальному виду
+firstParagraph.onmouseout = function() {
+this.style.color = ""; // Вернуть цвет символов к первоначальному
+this.style.fontFamily = ""; // Вернуть шрифт к первоначальному
+};
+</script>
+<script>
+function modifySecondParagraph() {
+// Найти второй абзац
+var secondParagraph = document.querySelectorAll("p")[1];
+
+// Изменить стили
+secondParagraph.style.marginRight = "3cm"; // Величина правого поля
+secondParagraph.style.textIndent = "2.5cm"; // Отступ первой строки
+}
+
+function resetSecondParagraph() {
+// Найти второй абзац
+var secondParagraph = document.querySelectorAll("p")[1];
+
+// Сбросить стили к первоначальным значениям
+secondParagraph.style.marginRight = "";
+secondParagraph.style.textIndent = "";
+}
+
+// Добавить обработчики событий onMouseOver и onMouseOut
+var secondParagraph = document.querySelectorAll("p")[1];
+secondParagraph.onmouseover = modifySecondParagraph;
+secondParagraph.onmouseout = resetSecondParagraph;
+</script>
+
+<script>
+// Получаем кнопки и рисунки по их ID
+var hideImageButton = document.getElementById("hideImage");
+var showImageButton = document.getElementById("showImage");
+var swapLayersButton = document.getElementById("swapLayers");
+var image1 = document.getElementById("image1");
+var image2 = document.getElementById("image2");
+var image3 = document.getElementById("image3");
+
+// Обработчик для скрытия среднего слоя
+hideImageButton.addEventListener("click", function() {
+image2.style.display = "none"; // Скрываем второй рисунок (средний слой)
+});
+
+// Обработчик для показа среднего слоя
+showImageButton.addEventListener("click", function() {
+image2.style.display = "block"; // Показываем второй рисунок (средний слой)
+});
+
+// Обработчик для замены нижнего и верхнего слоев
+	
+	swapLayersButton.addEventListener("click", function() {
+    // Скрыть image1 и image3
+    image1.style.display = "none";
+    image3.style.display = "none";
+	
+	// Переместить image3 на место image1 и наоборот
+    var tempTop = image1.style.top;
+    var tempLeft = image1.style.left;
+
+    image1.style.top = image3.style.top;
+    image1.style.left = image3.style.left;
+    image3.style.top = tempTop;
+    image3.style.left = tempLeft;
+	
+	// Показать image1 и image3
+    image1.style.display = "block";
+    image3.style.display = "block";
+	});
+	
+	//swapLayersButton.addEventListener("click", function() {
+	//var temp = image1.style.zIndex; // Сохраняем zIndex первого рисунка
+	//image1.style.zIndex = image3.style.zIndex; // Меняем zIndex первого и третьего рисунков
+	//image3.style.zIndex = temp;
+	//});
+	
+	
+</script>
+</html>
