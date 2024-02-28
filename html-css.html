@@ -270,11 +270,11 @@ image2.style.display = "block"; // Показываем второй рисун�
     image3.style.display = "block";
 	});
 	
-	//swapLayersButton.addEventListener("click", function() {
-	//var temp = image1.style.zIndex; // Сохраняем zIndex первого рисунка
-	//image1.style.zIndex = image3.style.zIndex; // Меняем zIndex первого и третьего рисунков
-	//image3.style.zIndex = temp;
-	//});
+	swapLayersButton.addEventListener("click", function() {
+	var temp = image1.style.zIndex; // Сохраняем zIndex первого рисунка
+	image1.style.zIndex = image3.style.zIndex; // Меняем zIndex первого и третьего рисунков
+	image3.style.zIndex = temp;
+	});
 	
 	
 </script>
